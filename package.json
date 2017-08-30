@@ -1,0 +1,36 @@
+{
+  "name": "__YOUR_SERVICE_NAME_HERE__",
+  "version": "1.0.0",
+  "scripts": {
+    "start-api": "node local-run.js",
+    "start-ui": "cd ui && npm start",
+    "build-ui": "cd ui && npm run build",
+    "start": "npm-run-all -p start-api start-ui"
+  },
+  "private": true,
+  "dependencies": {
+    "apollo-server-lambda": "^1.1.2",
+    "graphql": "^0.11.2",
+    "graphql-tools": "^1.2.2"
+  },
+  "devDependencies": {
+    "apollo-server-express": "^1.1.2",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-watch": "^2.0.7",
+    "body-parser": "^1.17.2",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb-base": "^11.3.2",
+    "eslint-plugin-import": "^2.7.0",
+    "express": "^4.15.4",
+    "http-proxy-middleware": "^0.17.4",
+    "js-yaml": "^3.9.1",
+    "npm-run-all": "^4.1.1",
+    "raw-loader": "^0.5.1",
+    "serverless-webpack": "^2.2.2",
+    "source-map-support": "^0.4.16",
+    "webpack": "^3.5.5",
+    "webpack-node-externals": "^1.6.0"
+  }
+}

@@ -1,0 +1,24 @@
+service: __YOUR_SERVICE_NAME_HERE__
+
+custom:
+  webpackIncludeModules: true
+
+# Check if these work for you / are up to date
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+plugins:
+  - serverless-webpack
+
+functions:
+  graphql:
+    handler: handler.graphql
+    events:
+      - http: POST /graphql
+      - http: GET /graphql
+
+  graphiql:
+    handler: handler.graphiql
+    events:
+      - http: GET /
