@@ -9,6 +9,6 @@ import schema from './schema';
 const app = express();
 app.use('/api/graphql', json(), graphqlExpress({ schema }));
 app.use('/api', graphiqlExpress({ endpointURL: '/api/graphql' }));
-app.use(proxy({ target: 'http://localhost:3000' }));
+app.use(proxy({ target: 'http://localhost:3000', ws: true }));
 
 app.listen(8080, () => console.log('Server running on http://localhost:8080/'));
