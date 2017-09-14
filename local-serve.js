@@ -12,7 +12,6 @@ if (process.env.API_ENDPOINT) {
   app.use(
     proxy('/api', {
       target: process.env.API_ENDPOINT,
-      logLevel: 'debug',
       changeOrigin: true,
       pathRewrite: { '^/api': '' },
     }),
